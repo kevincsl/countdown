@@ -26,14 +26,17 @@ function startTimer() {
     alert('請設定時間');
     return;
   }
-
+  startButton.disabled = true;
+  
   timerInterval = setInterval(() => {
     remainingTime--;
     timerDisplay.textContent = formatTime(remainingTime);
     if (remainingTime <= 0) {
       clearInterval(timerInterval);
-      alarmSound.play();
       alert('時間到!');
+      // alarmSound.play();
+      startButton.disabled = false;
+     
     }
   }, 1000);
 }
@@ -42,7 +45,12 @@ function stopTimer() {
   clearInterval(timerInterval);
   remainingTime= 0;
   timerDisplay.textContent = formatTime(remainingTime);
+  startButton.disabled = false;
+  alarmSound.pause();
+  alarmSound.currentTime = 0;
+
 }
 
 startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
+

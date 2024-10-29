@@ -9,6 +9,8 @@ body {
 }
 
 input[type="number"] { 
-  width: 50px;
+  width: 2.7em;
   margin: 0 5px;
+  font-size: 2.5em;
+  text-align: center;
 }
