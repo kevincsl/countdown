@@ -40,7 +40,7 @@ function startTimer() {
 
 function stopTimer() {
   clearInterval(timerInterval);
-  remainingTime = 0;
+  remainingTime= 0;
   timerDisplay.textContent = formatTime(remainingTime);
 }
 
