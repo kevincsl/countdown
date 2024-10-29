@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#timer {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+input[type="number"] {
+  width: 50px;
+  margin: 0 5px;
+}
